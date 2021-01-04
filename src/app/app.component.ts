@@ -10,6 +10,3 @@ export class AppComponent {
   nameF = 'Walter';
   lastNameF = 'Bishop';
 }
-
-
-
