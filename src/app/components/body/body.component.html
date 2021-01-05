@@ -3,15 +3,15 @@
   <div class="col">
     <h1>*ngIf</h1>
     <hr>
-    <div class="card text-white bg-dark mb-3" style="width: 100%;">
-      <div class="card-header">Header</div>
+    <div *ngIf="view" class="card text-white bg-dark mb-3" style="width: 100%;">
+      <div class="card-header">PH.</div>
       <div class="card-body">
-        <h5 class="card-title">Dark card title</h5>
-        <p class="card-text">"An enemy of fate"</p>
+        <h5 class="card-title">{{phr.aut}}</h5>
+        <p class="card-text">"{{phr.mss}}"</p>
       </div>
     </div>
 
-    <button class="btn btn-outline-dark btn-block" type="button">
+    <button (click)=" view = !view " class="btn btn-outline-light btn-block ">
       Mostrar/Ocultar
     </button>
   </div>
@@ -20,11 +20,7 @@
     <h1>*ngFor</h1>
     <hr>
     <ul class="list-group">
-      <li class="list-group-item">Cras justo odio</li>
-      <li class="list-group-item">Dapibus ac facilisis in</li>
-      <li class="list-group-item">Morbi leo risus</li>
-      <li class="list-group-item">Porta ac consectetur ac</li>
-      <li class="list-group-item">Vestibulum at eros</li>
+      <li *ngFor="let per of pers; let i = index" class="list-group-item text-dark bg-light"> {{ i + 1 }} - {{ per }}</li>
     </ul>
   </div>
 </div>
